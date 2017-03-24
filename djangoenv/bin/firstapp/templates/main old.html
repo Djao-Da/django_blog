@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<head>
+    <meta charset="UTF-8">
+    <title>Django Main</title>
+    <link rel="stylesheet" type="text/css" href="{% static "/css/foundation.css" %}">
+</head>
+<div class="row">
+<div class="top-bar">
+    <section class="top-bar-section">
+        <ul class="right">
+            {% if username %}
+                <li><a href="/auth/logout/">Выйти ({{ username }})</a></li>
+            {% else %}
+                <li><a href="/auth/login/">Войти</a></li>
+            {% endif %}
+        </ul>
+    </section>
+</div>
+</div>
+<body>
+<div class="row">
+    <div class="large-offset-1 large-10 columns">
+        <h1><a href="/">Мой блог </a></h1>
+    {% block article %}{% endblock %}
+        </div>
+        <!-- <div class="small-1 large-2 columns">...</div> -->
+    {% block login %}{% endblock %}
+    </div>
+<ul class="pagination">
+  <li class="arrow unavailable"><a href="">&laquo;</a></li>
+  <li class="current"><a href="">1</a></li>
+  <li><a href="">2</a></li>
+  <li><a href="">3</a></li>
+  <li><a href="">4</a></li>
+  <li class="unavailable"><a href="">&hellip;</a></li>
+  <li><a href="">12</a></li>
+  <li><a href="">13</a></li>
+  <li class="arrow"><a href="">&raquo;</a></li>
+</ul>
+</body>
+</html>
