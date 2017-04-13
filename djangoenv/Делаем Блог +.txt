@@ -1,3 +1,6 @@
 Blog 
 курс от сюда 
 https://www.youtube.com/watch?v=5g3-qJZbhy8&list=PLpTASIMYgCp8supkEmnnrYa5xi9g91ZPI&index=2
+
+статьи с подробным описанием тут 
+http://tango.pythoff.com/chapters/models.html#id6
